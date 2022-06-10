@@ -40,8 +40,8 @@ function new_image()
         ball_obj.scaleToHeight(50);
 
         ball_obj.set({
-          top:hole_y,
-		   left:hole_x  
+          top:ball_y,
+		   left:ball_x  
         });
         canvas.add(ball_obj);
     });
@@ -123,7 +123,7 @@ function my_keydown(e)
 		if(ball_x >5)
 		{
 			// Write a code to move ball left side.
-			ball_x=ball_x-block_image_height;
+			ball_x=ball_x-block_image_width;
        console.log("block image height =" + block_image_height);
        console.log("when left arrow key is pressed, x =" + ball_x + " , y=" + ball_y);
        canvas.remove(ball_obj);
@@ -137,7 +137,7 @@ function my_keydown(e)
 		{
 			// Write a code to move ball right side.
 
-			ball_x=ball_x + block_image_height;
+			ball_x=ball_x + block_image_width;
        console.log("block image height =" + block_image_height);
        console.log("when right arrow key is pressed, x =" + ball_x + " , y=" + ball_y);
        canvas.remove(ball_obj);
